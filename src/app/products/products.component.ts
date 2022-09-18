@@ -5,7 +5,7 @@ import {getProducts} from '../../assets/api/api.js'
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
  public products: ProductModel[] =[];
