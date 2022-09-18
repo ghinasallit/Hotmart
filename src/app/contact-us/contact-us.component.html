@@ -1,0 +1,39 @@
+<div class="container my-3 contact-us">
+  <div class="row">
+    <div><h3>Get in touch with us</h3></div>
+    <form [formGroup]="contactForm">
+      <div class="form-group my-3">
+        <label for="name">*Name</label>
+        <input type="text" class="form-control" id="name" placeholder="your name" formControlName="name">
+        <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched)"
+             class="text-danger w-100 text-left">
+          <div *ngIf="f.name.errors">
+            Name is required
+          </div>
+        </div>
+      </div>
+      <div class="form-group my-3">
+        <label for="email">*Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="email">
+        <div *ngIf="f.name.invalid && (f.email.dirty || f.email.touched)"
+             class="text-danger w-100 text-left">
+          <div *ngIf="f.email.errors">
+            Email is not valid.
+          </div>
+        </div>
+      </div>
+      <div class="form-group my-3">
+        <label for="message">*Your Message</label>
+        <textarea type="text" rows="5" class="form-control" id="message" placeholder="your message"
+                  formControlName="message"></textarea>
+        <div *ngIf="f.message.invalid && (f.message.dirty || f.message.touched)"
+             class="text-danger w-100 text-left">
+          <div *ngIf="f.message.errors">
+            message is required.
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary w-100 submit" (click)="submit()" [disabled]="contactForm.invalid">Submit</button>
+    </form>
+  </div>
+</div>
