@@ -1,0 +1,7 @@
+@media (max-width: 768px) {
+  .sidebar{
+    position: unset;
+    padding: 0;
+    border-bottom: 1px solid;
+  }
+}
